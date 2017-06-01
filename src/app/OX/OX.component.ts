@@ -2,10 +2,10 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'app-ox',
-    templateUrl: `app/OX/OX.component.html`
+    templateUrl: `./OX.component.html`
 })
 export class OXComponent {
-    welcome : string;
+    welcome: string;
     constructor(){
         this.welcome = "Welcome to OX page"
     };
