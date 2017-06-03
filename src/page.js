@@ -33,7 +33,7 @@ function move(elem, x, y) {
 function init() {
     // initialize and setup facebook js sdk
     FB.init({
-        appId      : '1817885345197290',
+        appId      : '791357664355674',
         xfbml      : true,
         version    : 'v2.9'
     });

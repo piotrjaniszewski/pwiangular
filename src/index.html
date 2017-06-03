@@ -17,7 +17,7 @@
   function init() {
     // initialize and setup facebook js sdk
     FB.init({
-      appId      : '1817885345197290',
+      appId      : '791357664355674',
       xfbml      : true,
       version    : 'v2.9'
     });
@@ -31,7 +31,7 @@
   }
 
   function informacje() {
-
+    init();
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
         FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,gender'}, function(response) {
@@ -41,8 +41,6 @@
         document.getElementById('informacje').innerHTML = "Zaloguj się!";
       }
     });
-    document.getElementById('informacje').innerHTML = "Zaloguj się!";
-
   }
 </script>
 

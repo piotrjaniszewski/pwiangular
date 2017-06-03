@@ -5,8 +5,8 @@ import {Component} from '@angular/core';
     templateUrl: `./fbLogin.component.html`
 })
 export class FbLoginComponent {
-    welcome : string;
-    constructor(){
+    welcome: string;
+    constructor() {
         this.welcome = "Welcome to OX page"
     };
 };
