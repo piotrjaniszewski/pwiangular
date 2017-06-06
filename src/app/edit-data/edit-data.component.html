@@ -1,0 +1,59 @@
+<h1>Edycja danych</h1>
+<div class="col-md-8 col-md-offset-2">
+  <div *ngIf="errorFlag" id="error" class="alert alert-danger">
+    <a (click)="hideErrorr()" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{errorMessage}}
+  </div>
+
+  <div *ngIf="successFlag"  class="alert alert-success alert-dismissable">
+    <a (click)="hideSuccess()" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{successMessage}}
+  </div>
+  <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm.value)">
+
+    <div class="form-group">
+      <label for="firstName">Imie</label>
+      <input maxlength="100"  pattern="/^([a-z]{2,3} [A-ZŁŻ][a-ząęóżźćńłś]{2,})|([A-ZŁŻ][a-ząęóżźćńłś]{2,})(\-[A-ZŁŻ][a-ząęóżźćńłś]{2,})?$" type="text" #firstNameRef="ngModel" maxlength="100" required class="form-control" id="firstName" name="firstName" [ngModel]="firstName"/>
+      <div *ngIf="firstNameRef.errors && (firstNameRef.dirty || firstNameRef.touched)" class="alert-danger">
+        <div [hidden] = "!firstNameRef.errors.required">
+          Podaj imię!
+        </div>
+        <div [hidden] = "!firstNameRef.errors.pattern">
+          Podaj poprawne imię!
+        </div>
+        <div [hidden]="!firstNameRef.errors.maxlength">
+          Imie może zawierać maksymalnie 100 znaków!
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Nazwisko</label>
+      <input maxlength="100"  pattern="/^([a-z]{2,3} [A-ZŁŻ][a-ząęóżźćńłś]{2,})|([A-ZŁŻ][a-ząęóżźćńłś]{2,})(\-[A-ZŁŻ][a-ząęóżźćńłś]{2,})?$" type="text" #lastNameRef="ngModel" maxlength="100" required class="form-control" id="lastName" name="lastName" [ngModel]="lastName"/>
+      <div *ngIf="lastNameRef.errors && (lastNameRef.dirty || lastNameRef.touched)" class="alert-danger">
+        <div [hidden] = "!lastNameRef.errors.required">
+          Podaj nazwisko!
+        </div>
+        <div [hidden] = "!lastNameRef.errors.pattern">
+          Podaj poprawne nazwisko!
+        </div>
+        <div [hidden]="!lastNameRef.errors.maxlength">
+          Nazwisko może zawierać maksymalnie 100 znaków!
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Obywatelstwo</label>
+      <select #countryRef="ngModel" required class="form-control" id="country" name="country" [ngModel]="country"><option>Austria</option><option>Belgia</option><option>Bułgaria</option><option>Chorwacja</option><option>Cypr</option><option>Czechy</option><option>Dania</option><option>Estonia</option><option>Finlandia</option><option>Francja</option><option>Grecja</option><option>Hiszpania</option><option>Holandia</option><option>Irlandia</option><option>Litwa</option><option>Luksemburg</option><option>Łotwa</option><option>Malta</option><option>Niemcy</option><option>Polska</option><option>Portugalia</option><option>Rumunia</option><option>Słowacja</option><option>Słowenia</option><option>Szwecja</option><option>Węgry</option><option>Wielka Brytania</option><option>Włochy</option></select>
+      <div *ngIf="countryRef.errors && (countryRef.dirty || countryRef.touched)" class="alert-danger">
+        <div [hidden] = "!countryRef.errors.required">
+          Podaj swoje obywatelstwo!
+        </div>
+      </div>
+    </div>
+
+    <button [disabled]="!editForm.form.valid" type="submit" class="btn btn-primary">Edytuj dane</button>
+    <button type="button" (click)="wyloguj()" class="btn btn-danger">Wyloguj</button>
+  </form>
+</div>
