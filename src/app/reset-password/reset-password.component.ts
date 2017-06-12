@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
+import {TranslateService} from "../translate/translate.service";
 
 @Component({
   selector: 'app-reset-password',
@@ -16,7 +17,7 @@ export class ResetPasswordComponent implements OnInit {
   successMessage: string;
   errorMessage: string;
 
-  constructor(private http: Http, private router: Router) {
+  constructor(private http: Http, private router: Router,private _translate: TranslateService) {
     if (localStorage.getItem('sessionToken')) {
       this.router.navigate(['/editData']);
     }
@@ -31,19 +32,19 @@ export class ResetPasswordComponent implements OnInit {
       headers.append('Content-Type', 'application/json');
       this.http.post('http://pwinode.azurewebsites.net/user/resetPassword', JSON.stringify(value), {headers: headers}).toPromise().then(response => {
         if (response.status === 200) {
-          this.showSuccess('Pomyślnie zmieniono hasło.');
+          this.showSuccess('Pomyslnie zmieniono haslo.');
         } else {
-          this.showError('Usługa chwilowo niedostępna. Spróbuj ponownie później.');
+          this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
         }
       }).catch(response => {
         if (response.status === 402) {
-          this.showError('Podano błędne dane.');
+          this.showError('Podano bledne dane.');
         } else {
-          this.showError('Usługa chwilowo niedostępna. Spróbuj ponownie później.');
+          this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
         }
       });
     } else {
-      this.showError('Podane hasła są różne. ');
+      this.showError('Podane hasla sa rozne.');
     }
     window.scrollTo(0, 0);
   }
@@ -57,13 +58,12 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   showError(message: string) {
-    this.errorMessage = message;
+    this.errorMessage = this._translate.instant(message);
     this.errorFlag = true;
   }
 
   showSuccess(message: string) {
-    this.successMessage = message;
+    this.successMessage = this._translate.instant(message);
     this.successFlag = true;
   }
-
 }

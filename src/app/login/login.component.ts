@@ -3,6 +3,7 @@ import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import {TranslateService} from "../translate/translate.service";
 
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   successMessage: string;
   errorMessage: string;
   loading = false;
-  constructor(private http: Http, private router: Router) {
+  constructor(private http: Http, private router: Router, private _translate: TranslateService) {
     window.scrollTo(0, 0); // TODO dać to wszędzie żeby sam scrollowało
     if (localStorage.getItem('sessionToken')) {
       this.router.navigate(['/editData']);
@@ -37,15 +38,15 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('sessionToken', response.json().sessionToken);
         this.router.navigate(['/editData']);
       } else {
-        this.showError('Usługa chwilowo niedostępna, spróbuj ponownie później');
+        this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
       }
       console.log(response.json());
     }).catch(response => {
       this.showError(' ' + response.status);
         if (response.status === 403) {
-          this.showError('Błędny email lub hasło');
+          this.showError('Bledny email lub haslo');
         } else {
-          this.showError('Usługa chwilowo niedostępna, spróbuj ponownie później');
+          this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
         }
     });
     this.loading = false;
@@ -61,12 +62,12 @@ export class LoginComponent implements OnInit {
   }
 
   showError(message: string) {
-    this.errorMessage = message;
+    this.errorMessage = this._translate.instant(message);
     this.errorFlag = true;
   }
 
   showSuccess(message: string) {
-    this.successMessage = message;
+    this.successMessage = this._translate.instant(message);
     this.successFlag = true;
   }
 }

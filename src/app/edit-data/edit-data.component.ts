@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
+import {TranslateService} from "../translate/translate.service";
 
 @Component({
   selector: 'app-edit-data',
@@ -19,7 +20,7 @@ export class EditDataComponent implements OnInit {
   lastName= '';
   country= '';
 
-  constructor(private http: Http, private router: Router) {
+  constructor(private http: Http, private router: Router, private _translate: TranslateService) {
     if (!localStorage.getItem('sessionToken')) {
       this.router.navigate(['/login']);
     } else {
@@ -42,10 +43,10 @@ export class EditDataComponent implements OnInit {
         this.country = response.json().country;
 
       } else {
-        this.showError('Usługa chwilowo niedostępna, spróbuj ponownie później.');
+        this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
       }
     }).catch(response => {
-      this.showError('Usługa chwilowo niedostępna, spróbuj ponownie później.');
+      this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
     });
   }
 
@@ -65,12 +66,12 @@ export class EditDataComponent implements OnInit {
           this.firstName = response.json().firstName;
           this.lastName = response.json().lastName;
           this.country = response.json().country;
-          this.showSuccess('Edycja zakończona powodzeniem');
+          this.showSuccess('Edycja zakonczona powodzeniem');
         } else {
-          this.showError('Usługa chwilowo niedostępna. Spróbuj ponownie później.');
+          this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
         }
       }).catch(response => {
-          this.showError('Usługa chwilowo niedostępna. Spróbuj ponownie później.');
+        this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
       });
       window.scrollTo(0, 0);
   }
@@ -88,10 +89,10 @@ export class EditDataComponent implements OnInit {
         localStorage.removeItem('userId');
         this.router.navigate(['/login']);
       } else {
-        this.showError('Usługa chwilowo niedostępna. Spróbuj ponownie później.' + response.status);
+        this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
       }
     }).catch(response => {
-      this.showError('Usługa chwilowo niedostępna. Spróbuj ponownie później.' + response.status);
+      this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
     });
     window.scrollTo(0, 0);
   }
@@ -107,12 +108,12 @@ export class EditDataComponent implements OnInit {
   }
 
   showError(message: string) {
-    this.errorMessage = message;
+    this.errorMessage = this._translate.instant(message);
     this.errorFlag = true;
   }
 
   showSuccess(message: string) {
-    this.successMessage = message;
+    this.successMessage = this._translate.instant(message);
     this.successFlag = true;
   }
 }

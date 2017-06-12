@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService } from './translate';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'; // import home components
@@ -13,7 +14,7 @@ import { MyAccountComponent } from './my-account/my-account.component';
 import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { EditDataComponent } from './edit-data/edit-data.component';
-
+import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,13 @@ import { EditDataComponent } from './edit-data/edit-data.component';
     FbLoginComponent,
     HomeComponent,
     OXComponent,
+    TranslatePipe,
     LoginComponent,
     MyAccountComponent,
     RegisterComponent,
     ResetPasswordComponent,
-    EditDataComponent
+    EditDataComponent,
+    CookieBannerComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { EditDataComponent } from './edit-data/edit-data.component';
     routing,
     HttpModule
   ],
-  providers: [],
+  providers: [TRANSLATION_PROVIDERS, TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

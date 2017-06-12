@@ -10,11 +10,11 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-
-        <li class = "active"><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/OX" routerLinkActive="active">Kółko i krzyżyk</a></li>
-        <li><a routerLink="/fblogin" routerLinkActive="active" onclick="init()">Logowanie Facebook</a></li>
-        <li><a routerLink="/myAccount" routerLinkActive="active" >Moje konto</a></li>
+        <li>        <select class="form-control" (change)="onChange($event.target.value)" id="lang-select"><option>pl</option><option>en</option><option>ru</option></select></li>
+        <li class = "active"><a routerLink="/home" routerLinkActive="active">{{ 'home' | translate }}</a></li>
+        <li><a routerLink="/OX" routerLinkActive="active">{{'OX'|translate}}</a></li>
+        <li><a routerLink="/fblogin" routerLinkActive="active" onclick="init()">{{'facebook'|translate}}</a></li>
+        <li><a routerLink="/myAccount" routerLinkActive="active" >{{'Moje konto'|translate}}</a></li>
 
       </ul>
     </div>

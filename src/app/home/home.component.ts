@@ -5,9 +5,5 @@ import {Component} from '@angular/core';
     templateUrl: `./home.component.html`
 })
 export class HomeComponent {
-    welcome : string;
-    constructor(){
-        this.welcome = "Welcome to home page"
-
-    };
+    constructor(){ };
 };
