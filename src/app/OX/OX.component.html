@@ -1,18 +1,18 @@
 <div id="OX">
-    <h1>{{'Kolko i krzyzyk'|translate}}</h1>
-    <p style="padding:20px" id="wyswietlacz">{{'Gracz: X'|translate}}</p>
-  <button style="padding-left:20px" class="btn btn-default btn-lg" onclick="newGame()">{{'Nowa gra'|translate}}</button>
+  <h1>{{'Kolko i krzyzyk'|translate}}</h1>
+  <p style="padding:20px" id="wyswietlacz">{{wyswietlacz}}</p>
+  <button style="padding-left:20px" class="btn btn-default btn-lg" (click)="newGame()">{{'Nowa gra'|translate}}</button>
   <div class="game">
-        <div id="t1" class="pole" onclick="move(this,0,0)"></div>
-        <div id="t2" class="pole" onclick="move(this,1,0)"></div>
-        <div id="t3" class="pole" onclick="move(this,2,0)"></div>
+    <div id="t1" class="pole" (click)="move(0,0)">{{table[0][0]}}</div>
+    <div id="t2" class="pole" (click)="move(1,0)">{{table[1][0]}}</div>
+    <div id="t3" class="pole" (click)="move(2,0)">{{table[2][0]}}</div>
 
-        <div id="t4" class="pole" onclick="move(this,0,1)"></div>
-        <div id="t5" class="pole" onclick="move(this,1,1)"></div>
-        <div id="t6" class="pole" onclick="move(this,2,1)"></div>
+    <div id="t4" class="pole" (click)="move(0,1)">{{table[0][1]}}</div>
+    <div id="t5" class="pole" (click)="move(1,1)">{{table[1][1]}}</div>
+    <div id="t6" class="pole" (click)="move(2,1)">{{table[2][1]}}</div>
 
-        <div id="t7" class="pole" onclick="move(this,0,2)"></div>
-        <div id="t8" class="pole" onclick="move(this,1,2)"></div>
-        <div id="t9" class="pole" onclick="move(this,2,2)"></div>
-    </div>
+    <div id="t7" class="pole" (click)="move(0,2)">{{table[0][2]}}</div>
+    <div id="t8" class="pole" (click)="move(1,2)">{{table[1][2]}}</div>
+    <div id="t9" class="pole" (click)="move(2,2)">{{table[2][2]}}</div>
+  </div>
 </div>

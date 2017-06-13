@@ -104,8 +104,12 @@ export const LANG_EN_TRANS = {
   'Wlochy':'Italy',
 
 
-  'ptanie1':'pytanie1',
-  'ptanie2':'pytanie2',
-  'ptanie3':'pytanie3',
-  'ptanie4':'pytanie4'
+  'pytanie1':'pytanie1',
+  'pytanie2':'pytanie2',
+  'pytanie3':'pytanie3',
+  'pytanie4':'pytanie4',
+
+  'Gracz: ':'Player: ',
+  'Wygrywa gracz: ':'The winner is player: ',
+  'Zaloguj sie!':'Zaloguj się!'
 };

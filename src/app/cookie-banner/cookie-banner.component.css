@@ -1,0 +1,22 @@
+.jumbotron{
+  padding: 0px;
+  margin:0px;
+  text-align:center;
+  width:100%;
+  border-style:solid;
+  border-color: tan;
+  background: tan;
+  border-radius:0px;
+}
+.container{
+  width:100%;
+  padding: 0px;
+  margin:0px;
+}
+button{
+  margin-bottom:5px;
+
+}
+
+h6{
+}
