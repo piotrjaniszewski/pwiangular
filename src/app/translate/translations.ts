@@ -12,9 +12,9 @@ export const TRANSLATIONS = new OpaqueToken('translations');
 
 // all traslations
 const dictionary = {
-  [LANG_EN_NAME]: LANG_EN_TRANS,
-  [LANG_RU_NAME]: LANG_RU_TRANS,
-  [LANG_PL_NAME]: LANG_PL_TRANS
+  'en': LANG_EN_TRANS,
+  'ru': LANG_RU_TRANS,
+  'pl': LANG_PL_TRANS
 };
 
 // providers

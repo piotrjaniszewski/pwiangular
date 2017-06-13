@@ -6,7 +6,7 @@ $(document).ready(function(){
       $(this).addClass("active");
     });
 
-    $('.navbar-collapse a').click(function(){
+      $('.navbar-collapse .guzikHide').click(function(){
       $(".navbar-collapse").collapse('hide');
     });
   });

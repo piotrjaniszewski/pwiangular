@@ -30,7 +30,7 @@
     }(document, 'script', 'facebook-jssdk'));
   }
 
-  function informacje(zalogujSie) {
+  function informacje() {
     init();
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
@@ -38,7 +38,7 @@
           document.getElementById('informacje').innerHTML = response.name+" "+response.id+" "+response.gender+" ";
         });
       }else{
-        document.getElementById('informacje').innerHTML = zalogujSie;
+        document.getElementById('informacje').innerHTML = 'Zaloguj się!';
       }
     });
   }

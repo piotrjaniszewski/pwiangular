@@ -13,9 +13,9 @@ export class OXComponent {
   gameEnd=false;
   player="X";
 
-    constructor(_translate:TranslateService){
+    constructor(private _translate:TranslateService){
       this.gracz=_translate.instant('Gracz: ');
-      this.wygrywaGracz = _translate.instant('Wygrywa gracz: ');
+      this.wygrywaGracz = this._translate.instant('Wygrywa gracz: ');
     };
 
   move( x, y) {
@@ -42,18 +42,18 @@ export class OXComponent {
 
   win(){
     this.gameEnd=true;
-    this.wyswietlacz = this.wygrywaGracz + this.player;
+    this.wyswietlacz = this._translate.instant('Wygrywa gracz: ') + this.player;
   }
 
   changePlayer() {
     if (this.player==="X") this.player = "O";
     else this.player="X";
-    this.wyswietlacz=this.gracz + this.player;
+    this.wyswietlacz=this._translate.instant('Gracz: ') + this.player;
   }
 
   newGame() {
     this.player="X";
-    this.wyswietlacz = this.gracz + this.player;
+    this.wyswietlacz = this._translate.instant('Gracz: ') + this.player;
     this.table=[["","",""],["","",""],["","",""]];
     this.gameEnd=false;
   }

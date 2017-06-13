@@ -111,5 +111,6 @@ export const LANG_EN_TRANS = {
 
   'Gracz: ':'Player: ',
   'Wygrywa gracz: ':'The winner is player: ',
-  'Zaloguj sie!':'Zaloguj się!'
+  'Zaloguj sie!':'Zaloguj się!',
+  'Jezyk': 'Language'
 };
