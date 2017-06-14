@@ -18,9 +18,12 @@ export class AppComponent implements OnInit {
       { display: 'Polish', value: 'pl' },
       { display: 'Russian', value: 'ru' }
     ];
-
+    if(localStorage.getItem('Language')){
+      this.selectLang(localStorage.getItem('Language'));
+    } else{
+      this.selectLang('pl');
+    }
     // set current langage
-    this.selectLang('pl');
   }
 
   isCurrentLang(lang: string) {
@@ -32,7 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   selectLang(lang: string) {
-    // set current lang;
+    localStorage.setItem('Language',lang)
     this._translate.use(lang);
   }
 }

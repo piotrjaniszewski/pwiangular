@@ -10,4 +10,7 @@ export class FbLoginComponent {
   constructor(_translate:TranslateService) {
     this.zalogujSie=_translate.instant('Zaloguj sie!')
   };
+
+
+
 };

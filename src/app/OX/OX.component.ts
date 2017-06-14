@@ -14,6 +14,7 @@ export class OXComponent {
   player="X";
 
     constructor(private _translate:TranslateService){
+      this.wyswietlacz=_translate.instant('Gracz: ')+'X';
       this.gracz=_translate.instant('Gracz: ');
       this.wygrywaGracz = this._translate.instant('Wygrywa gracz: ');
     };

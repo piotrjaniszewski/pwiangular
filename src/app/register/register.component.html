@@ -128,7 +128,7 @@
         </div>
       </div>
     </div>
-    <button [disabled]="!registerForm.form.valid" type="submit" class="btn btn-primary">{{'Zarejestruj sie'|translate}}</button>
+    <button [disabled]="loading || !registerForm.form.valid" type="submit" class="btn btn-primary">{{'Zarejestruj sie'|translate}}</button>
     <a [routerLink]="['/login']" class="btn btn-link">{{'Zaloguj'|translate}}</a>
 
 

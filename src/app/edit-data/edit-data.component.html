@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    <button [disabled]="!editForm.form.valid" type="submit" class="btn btn-primary">{{'Edytuj dane'| translate}}</button>
-    <button type="button" (click)="wyloguj()" class="btn btn-danger">{{'Wyloguj'|translate}}</button>
+    <button [disabled]=" loading ||!editForm.form.valid" type="submit" class="btn btn-primary">{{'Edytuj dane'| translate}}</button>
+    <button [disabled]=" loading " type="button" (click)="wyloguj()" class="btn btn-danger">{{'Wyloguj'|translate}}</button>
   </form>
 </div>

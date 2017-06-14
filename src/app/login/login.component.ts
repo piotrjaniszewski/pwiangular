@@ -17,18 +17,20 @@ export class LoginComponent implements OnInit {
   successFlag = false;
   successMessage: string;
   errorMessage: string;
-  loading = false;
+  loading:boolean;
   constructor(private http: Http, private router: Router, private _translate: TranslateService) {
     window.scrollTo(0, 0); // TODO dać to wszędzie żeby sam scrollowało
     if (localStorage.getItem('sessionToken')) {
       this.router.navigate(['/editData']);
     }
+    this.loading=false;
   }
 
   ngOnInit() { }
 
   onSubmit(value: any) {
     this.loading = true;
+
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     console.log(JSON.stringify(value));
@@ -48,10 +50,9 @@ export class LoginComponent implements OnInit {
         } else {
           this.showError('Usluga chwilowo niedostepna, sprobuj ponownie pozniej.');
         }
+      this.loading=false;
     });
-    this.loading = false;
   }
-// calkowicienowehaslo
 
   hideErrorr() {
     this.errorFlag = false;
