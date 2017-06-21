@@ -119,5 +119,23 @@ export const LANG_PL_TRANS = {
   'Zamknij':'Zamknij',
   'cookies1':'Strona korzysta z plików cookies w celu realizacji usług i zgodnie z ',
   'cookiesLink':'Polityką Plików Cookies.',
-  'cookies2':' Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.'
+  'cookies2':' Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.',
+
+
+  'O mnie':'O mnie',
+  'Kontakt':'Kontakt',
+  'Doswiaczenie':'Doświadczenie',
+  'Aby uzyskac dostep do tej strony zaloguj sie.':'Aby uzyskać dostęp do tej strony zaloguj się.',
+  'Zaloguj sie':'Zaloguj się',
+  'Rejestracja':'Rejestracja',
+  'O mnie p1':'Jestem studentem Szkoły Głównej Gospodarstwa Wiejskiego w Warszawie na kierunku Informatyka ze specjalnością Inżynieria Systemów Informacyjnych.',
+  'O mnie p2':'Interesuję się astronomią i astrofizyką. W wolnej chwili lubię czytać Książki oraz oglądać filmy.',
+  'Adres email':'Adres e-mail',
+  'Numer telefonu':'Numer telefonu',
+  'Kliknij tutaj':'Kliknij tutaj',
+  'Pracodawca':'Pracodawca',
+  'Data':'Data',
+  'Zadania':'Zadania',
+  'sierpien 2016':'sierpień 2016',
+  'Tworzenie aplikacji gieldowej w technologi Java Swing.':'Tworzenie aplikacji gieldowej w technologi Java Swing.'
 };

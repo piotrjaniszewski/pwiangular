@@ -24,6 +24,7 @@ export class EditDataComponent implements OnInit {
   constructor(private http: Http, private router: Router, private _translate: TranslateService) {
     if (!localStorage.getItem('sessionToken')) {
       this.router.navigate(['/login']);
+
     } else {
       this.loading = false;
       this.getInfo();

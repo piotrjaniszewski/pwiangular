@@ -1,0 +1,39 @@
+<div id="contact">
+  <h1>{{'Kontakt'|translate}}</h1>
+
+<div *ngIf="flag">
+    <table class="table">
+      <tbody>
+      <tr>
+        <td><b>{{'Adres email'|translate}}</b></td>
+        <td>piotrjaniszewski@outlook.com</td>
+      </tr>
+      <tr>
+        <td><b>{{'Numer telefonu'|translate}}</b></td>
+        <td>506278221</td>
+      </tr>
+      <tr>
+        <td><b>Facebook</b></td>
+        <td><a target="_blank" href="https://www.facebook.com/piotr.janiszewski.794">{{'Kliknij tutaj'|translate}}</a></td>
+      </tr>
+      <tr>
+        <td><b>Instagram</b></td>
+        <td><a target="_blank" href="https://www.instagram.com/janisz18/">{{'Kliknij tutaj'|translate}}</a></td>
+      </tr>
+      <tr>
+        <td><b>Filmweb</b></td>
+        <td><a target="_blank" href="http://www.filmweb.pl/user/Janisz18">{{'Kliknij tutaj'|translate}}</a></td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+
+  <div *ngIf="!flag">
+    <p>{{'Aby uzyskac dostep do tej strony zaloguj sie.'|translate}}</p>
+    <p>
+      <a [routerLink]="['/login']" class="btn btn-link">{{'Zaloguj sie'|translate}}</a>
+      <a [routerLink]="['/register']" class="btn btn-link">{{'Rejestracja'|translate}}</a>
+    </p>
+  </div>
+
+</div>

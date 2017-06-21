@@ -116,5 +116,23 @@ export const LANG_EN_TRANS = {
   'Zamknij':'Close',
   'cookies1':'This website use cookies according to the ',
   'cookiesLink':'Cookies Policy.',
-  'cookies2':'By continuing you agree for using them.'
+  'cookies2':'By continuing you agree for using them.',
+
+
+  'O mnie':'About me',
+  'Kontakt':'Contact',
+  'Doswiadczenie':'Experience',
+  'Aby uzyskac dostep do tej strony zaloguj sie.':'You have to log in to access this site.',
+  'Zaloguj sie':'Log in',
+  'Rejestracja':'Register',
+  'O mnie p1':'I am IT student at Warsaw University of Life Sciences with specialisation Information Systems Engineering.',
+  'O mnie p2':'I am interested in Astronomy and Astrophysics. In my free time i read books and watch movies.',
+  'Adres email':'E-mail address',
+  'Numer telefonu':'Phone number',
+  'Kliknij tutaj':'Click here',
+  'Pracodawca':'Employer',
+  'Data':'Date',
+  'Zadania':'Tasks',
+  'sierpien 2016':'august 2016',
+  'Tworzenie aplikacji gieldowej w technologi Java Swing.':'Developing stock market app using Java Swing.'
 };

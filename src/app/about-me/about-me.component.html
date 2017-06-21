@@ -1,0 +1,15 @@
+<div id="facebookLogin">
+  <h1>{{'O mnie'|translate}}</h1>
+  <div *ngIf="flag">
+    <p>{{'O mnie p1'|translate}}</p>
+    <p>{{'O mnie p2'|translate}}</p>
+  </div>
+
+  <div *ngIf="!flag">
+    <p>{{'Aby uzyskac dostep do tej strony zaloguj sie.'|translate}}</p>
+    <p>
+      <a [routerLink]="['/login']" class="btn btn-link">{{'Zaloguj sie'|translate}}</a>
+      <a [routerLink]="['/register']" class="btn btn-link">{{'Rejestracja'|translate}}</a>
+    </p>
+  </div>
+</div>

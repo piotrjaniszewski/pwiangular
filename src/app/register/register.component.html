@@ -8,7 +8,7 @@
   <div *ngIf="successFlag"  class="alert alert-success alert-dismissable">
     <a (click)="hideSuccess()" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     {{successMessage}}
-    <a [routerLink]="['/login']" class="btn btn-link">Zaloguj się</a>
+    <a [routerLink]="['/login']" class="btn btn-link">{{'Zaloguj sie'|translate}}</a>
 
   </div>
   <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)">

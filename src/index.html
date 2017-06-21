@@ -4,24 +4,14 @@
   <meta charset="utf-8">
   <title>Piotr Janiszewski - Programowanie w internecie</title>
   <base href="/">
-
-  <link rel="stylesheet" type="text/css" href="bot.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>$(document).ready(function(){$(function(){$("li").click(function(){$("li").removeClass("active");$(this).addClass("active");});$('.navbar-collapse .guzikHide').click(function(){$(".navbar-collapse").collapse('hide');});});});</script>
 </head>
 <body>
 <div id="fb-root"></div>
-<script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.9&appId=1817885345197290";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
+<script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));</script>
   <app-root>Loading...</app-root>
 </body>
 </html>

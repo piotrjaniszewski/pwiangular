@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component'; // import OX component
 import { RegisterComponent } from './register/register.component'; // import OX component
 import { EditDataComponent } from './edit-data/edit-data.component'; // import OX component
 import { ResetPasswordComponent } from './reset-password/reset-password.component'; // import OX component
+import { AboutMeComponent } from './about-me/about-me.component';
+import { ContactComponent } from './contact/contact.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,6 +22,10 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'resetPassword', component: ResetPasswordComponent },
   { path: 'editData', component: EditDataComponent},
+  { path: 'aboutMe', component: AboutMeComponent},
+  { path: 'contact', component: ContactComponent},
+  { path: 'experience', component: ExperienceComponent},
+
 
   {path: '**', component: HomeComponent},
   { path: '', component: HomeComponent, pathMatch: 'full'} // redirect to home page on load

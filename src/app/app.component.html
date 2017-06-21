@@ -11,10 +11,19 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <!--<li class = "active"><a routerLink="/home" routerLinkActive="active">{{ 'home' | translate }}</a></li>-->
-        <li class="navGuzik"><a class="guzikHide" routerLink="/OX" routerLinkActive="active">{{'OX'|translate}}</a></li>
-        <li class="navGuzik"><a class="guzikHide" routerLink="/fblogin" routerLinkActive="active" onclick="init()">{{'facebook'|translate}}</a></li>
-        <li class="navGuzik"><a class="guzikHide" routerLink="/myAccount" routerLinkActive="active" >{{'Moje konto'|translate}}</a></li>
+        <li class="navGuzik"><a class="guzikHide" routerLink="/aboutMe" routerLinkActive="active">{{'O mnie'|translate}}</a></li>
+        <li class="navGuzik"><a class="guzikHide" routerLink="/experience" routerLinkActive="active">{{'Doswiadczenie'|translate}}</a></li>
+        <li class="navGuzik"><a class="guzikHide" routerLink="/contact" routerLinkActive="active" >{{'Kontakt'|translate}}</a></li>
+
+        <li class="dropdown navGuzik">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{'Zadania'|translate}}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a class="guzikHide" style="cursor: pointer;" routerLink="/OX" routerLinkActive="active">{{'OX'|translate}}</a></li>
+            <li><a class="guzikHide" style="cursor: pointer;" routerLink="/fblogin" routerLinkActive="active" onclick="init()">{{'facebook'|translate}}</a></li>
+            <li><a class="guzikHide" style="cursor: pointer;" routerLink="/myAccount" routerLinkActive="active" >{{'Moje konto'|translate}}</a></li>
+          </ul>
+        </li>
+
         <li class="dropdown navGuzik">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{'Jezyk'|translate}}<span class="caret"></span></a>
           <ul class="dropdown-menu">
