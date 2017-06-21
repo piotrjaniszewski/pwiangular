@@ -106,13 +106,17 @@ export const LANG_RU_TRANS = {
   'Wlochy':'Италия',
 
 
-  'pytanie1':'Какое твоё любимое животное?', //'Jakie jest twoje ulubione zwierzę?'
-  'pytanie2':'Какой твой любимый цвет?', //'Jaki jest twój ulubiony kolor?'
-  'pytanie3':'Какое твоё любимое растение?', //'Jaka jest twoja ulubiona roślina?'
-  'pytanie4':'Какое твоё любимое время года?', //'Jaka jest twoja ulubiona pora roku?'
+  'pytanie1':'Что ты видишь за своим окном?',
+  'pytanie2':'Чего ты боишься больше всего?',
+  'pytanie3':'Что ты делаешь лучше всего?',
+  'pytanie4':'Чего ты не терпишь больше всего?',
 
-  'Gracz: ':'Gracz: ',
-  'Wygrywa gracz: ':'Wygrywa gracz: ',
-  'Zaloguj sie!': 'Zaloguj się!',
-  'Jezyk': 'Язык'
+  'Gracz: ':'Игрок: ',
+  'Wygrywa gracz: ':'Победил игрок: ',
+  'Zaloguj sie!': 'Следует войти!',
+  'Jezyk': 'Язык',
+  'Zamknij':'Закрой',
+  'cookies1':'Сайт использует файлы куки и похожие технологии согласно ',
+  'cookiesLink':'Политике использования куки-файлов',
+  'cookies2':'. При использовании данного сайта, вы подтверждаете свое согласие на использование этих файлов.'
 };

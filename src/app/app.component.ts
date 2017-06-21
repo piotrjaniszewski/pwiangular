@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from './translate';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { TranslateService } from './translate';
 
 export class AppComponent implements OnInit {
   public supportedLanguages: any[];
-  constructor(private _translate: TranslateService) { }
+  constructor(private router: Router,private _translate: TranslateService) { }
 
   ngOnInit() {
     // standing data
@@ -37,5 +38,6 @@ export class AppComponent implements OnInit {
   selectLang(lang: string) {
     localStorage.setItem('Language',lang)
     this._translate.use(lang);
+    this.router.navigate(['/home']);
   }
 }

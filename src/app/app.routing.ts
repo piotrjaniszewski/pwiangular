@@ -20,7 +20,7 @@ const appRoutes: Routes = [
   { path: 'resetPassword', component: ResetPasswordComponent },
   { path: 'editData', component: EditDataComponent},
 
-  // {path: '**', component: PageNotFoundComponent},
+  {path: '**', component: HomeComponent},
   { path: '', component: HomeComponent, pathMatch: 'full'} // redirect to home page on load
 ];
 

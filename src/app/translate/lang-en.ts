@@ -32,7 +32,7 @@ export const LANG_EN_TRANS = {
   'p1':'Page was created as a project for subject \"Programowanie w internecie\" ',
   'p2':'Web application uses angular and web server uses node.js with express framework and ORM Sequelize',
   'p3':'Link to the web application: ',
-  'p4':'Link to the serwera: ',
+  'p4':'Link to the server: ',
   'kliknij tutaj': 'click here',
 
   //login
@@ -104,13 +104,17 @@ export const LANG_EN_TRANS = {
   'Wlochy':'Italy',
 
 
-  'pytanie1':'pytanie1',
-  'pytanie2':'pytanie2',
-  'pytanie3':'pytanie3',
-  'pytanie4':'pytanie4',
+  'pytanie1':'What do you see outside the window?',
+  'pytanie2':'What are you afraid of the most?',
+  'pytanie3':'What do you do best?',
+  'pytanie4':'What do you dislike the most?',
 
   'Gracz: ':'Player: ',
   'Wygrywa gracz: ':'The winner is player: ',
-  'Zaloguj sie!':'Zaloguj się!',
-  'Jezyk': 'Language'
+  'Zaloguj sie!':'Log in first!',
+  'Jezyk': 'Language',
+  'Zamknij':'Close',
+  'cookies1':'This website use cookies according to the ',
+  'cookiesLink':'Cookies Policy.',
+  'cookies2':'By continuing you agree for using them.'
 };

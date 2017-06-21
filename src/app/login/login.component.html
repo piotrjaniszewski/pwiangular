@@ -1,6 +1,6 @@
 <h1>{{'Logowanie' | translate}}</h1>
 <div class="col-md-8 col-md-offset-2">
-  <div *ngIf="errorFlag" id="error" class="alert alert-danger">
+  <div *ngIf="errorFlag" id="error" class="alert alert-warning">
     <a (click)="hideErrorr()" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     {{errorMessage}}
   </div>
@@ -15,7 +15,7 @@
     <div class="form-group">
       <label for="email" >{{'Email'|translate}}</label>
       <input type="text" #loginRef="ngModel" pattern = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required class="form-control" id="email" name="email" ngModel/>
-      <div *ngIf="loginRef.errors && (loginRef.dirty || loginRef.touched)" class="alert-danger">
+      <div *ngIf="loginRef.errors && (loginRef.dirty || loginRef.touched)" class="alert-warning">
         <div [hidden] = "!loginRef.errors.required">
           {{'Podaj email!'|translate}}
         </div>
@@ -28,7 +28,7 @@
     <div class="form-group">
       <label for="password">{{'Haslo'|translate}}</label>
       <input type="password" #emailRef="ngModel" maxlength="100" required class="form-control" id="password" name="password" ngModel/>
-      <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="alert-danger">
+      <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="alert-warning">
         <div [hidden] = "!emailRef.errors.required">
           {{'Podaj haslo!'|translate}}
         </div>

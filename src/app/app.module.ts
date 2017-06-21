@@ -15,6 +15,9 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { EditDataComponent } from './edit-data/edit-data.component';
 import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { ContactComponent } from './contact/contact.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
     RegisterComponent,
     ResetPasswordComponent,
     EditDataComponent,
-    CookieBannerComponent
+    CookieBannerComponent,
+    AboutMeComponent,
+    ContactComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

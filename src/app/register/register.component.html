@@ -1,6 +1,6 @@
 <h1>Rejestracja</h1>
 <div class="col-md-8 col-md-offset-2">
-  <div *ngIf="errorFlag" id="error" class="alert alert-danger">
+  <div *ngIf="errorFlag" id="error" class="alert alert-warning">
     <a (click)="hideErrorr()" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     {{errorMessage}}
   </div>
@@ -16,7 +16,7 @@
     <div class="form-group">
       <label for="firstName">{{'Imie'|translate}}</label>
       <input maxlength="100"  pattern="/^([a-z]{2,3} [A-ZŁŻ][a-ząęóżźćńłś]{2,})|([A-ZŁŻ][a-ząęóżźćńłś]{2,})(\-[A-ZŁŻ][a-ząęóżźćńłś]{2,})?$" type="text" #firstNameRef="ngModel" maxlength="100" required class="form-control" id="firstName" name="firstName" ngModel/>
-      <div *ngIf="firstNameRef.errors && (firstNameRef.dirty || firstNameRef.touched)" class="alert-danger">
+      <div *ngIf="firstNameRef.errors && (firstNameRef.dirty || firstNameRef.touched)" class="alert-warning">
         <div [hidden] = "!firstNameRef.errors.required">
           {{'Podaj imie!'|translate}}
         </div>
@@ -32,7 +32,7 @@
     <div class="form-group">
       <label for="lastName">{{'Nazwisko'|translate}}</label>
       <input maxlength="100"  pattern="/^([a-z]{2,3} [A-ZŁŻ][a-ząęóżźćńłś]{2,})|([A-ZŁŻ][a-ząęóżźćńłś]{2,})(\-[A-ZŁŻ][a-ząęóżźćńłś]{2,})?$" type="text" #lastNameRef="ngModel" maxlength="100" required class="form-control" id="lastName" name="lastName" ngModel/>
-      <div *ngIf="lastNameRef.errors && (lastNameRef.dirty || lastNameRef.touched)" class="alert-danger">
+      <div *ngIf="lastNameRef.errors && (lastNameRef.dirty || lastNameRef.touched)" class="alert-warning">
         <div [hidden] = "!lastNameRef.errors.required">
           {{'Podaj nazwisko!'|translate}}
         </div>
@@ -48,7 +48,7 @@
     <div class="form-group">
     <label for="email">{{'Email'|translate}}</label>
     <input maxlength="100"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" type="text" #emailRef="ngModel" maxlength="100" required class="form-control" id="email" name="email" ngModel/>
-    <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="alert-danger">
+    <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="alert-warning">
       <div [hidden] = "!emailRef.errors.required">
         {{'Podaj adres email!'|translate}}
       </div>
@@ -64,7 +64,7 @@
     <div class="form-group">
       <label for="country">{{'Obywatelstwo'|translate}}</label>
       <select #countryRef="ngModel" required class="form-control" id="country" name="country" ngModel><option>{{'Austria'|translate}}</option><option>{{'Belgia'|translate}}</option><option>{{'Bulgaria'|translate}}</option><option>{{'Chorwacja'|translate}}</option><option>{{'Cypr'|translate}}</option><option>{{'Czechy'|translate}}</option><option>{{'Dania'|translate}}</option><option>{{'Estonia'|translate}}</option><option>{{'Finlandia'|translate}}</option><option>{{'Francja'|translate}}</option><option>{{'Grecja'|translate}}</option><option>{{'Hiszpania'|translate}}</option><option>{{'Holandia'|translate}}</option><option>{{'Irlandia'|translate}}</option><option>{{'Litwa'|translate}}</option><option>{{'Luksemburg'|translate}}</option><option>{{'lotwa'|translate}}</option><option>{{'Malta'|translate}}</option><option>{{'Niemcy'|translate}}</option><option>{{'Polska'|translate}}</option><option>{{'Portugalia'|translate}}</option><option>{{'Rumunia'|translate}}</option><option>{{'Slowacja'|translate}}</option><option>{{'Slowenia'|translate}}</option><option>{{'Szwecja'|translate}}</option><option>{{'Wegry'|translate}}</option><option>{{'Wielka Brytania'|translate}}</option><option>{{'Wlochy'|translate}}</option></select>
-      <div *ngIf="countryRef.errors && (countryRef.dirty || countryRef.touched)" class="alert-danger">
+      <div *ngIf="countryRef.errors && (countryRef.dirty || countryRef.touched)" class="alert-warning">
         <div [hidden] = "!countryRef.errors.required">
           {{'Podaj swoje obywatelstwo!'|translate}}
         </div>
@@ -74,7 +74,7 @@
     <div class="form-group">
       <label for="password">{{'Haslo'|translate}}</label>
       <input type="password" maxlength="100"  #passwordRef="ngModel" maxlength="100" required class="form-control" id="password" name="password" ngModel/>
-      <div *ngIf="countryRef.errors && (passwordRef.dirty || passwordRef.touched)" class="alert-danger">
+      <div *ngIf="countryRef.errors && (passwordRef.dirty || passwordRef.touched)" class="alert-warning">
         <div [hidden] = "!passwordRef.errors.required">
           {{'Podaj haslo!'|translate}}
         </div>
@@ -90,7 +90,7 @@
     <div class="form-group">
       <label for="confirmPassword">{{'Potwierdzenie hasla'|translate}}</label>
       <input minlength="6" maxlength="100"  type="password" #passwordConfirmRef="ngModel" maxlength="100" required class="form-control" id="confirmPassword" name="confirmPassword" ngModel/>
-      <div *ngIf="passwordConfirmRef.errors && (passwordConfirmRef.dirty || passwordConfirmRef.touched)" class="alert-danger">
+      <div *ngIf="passwordConfirmRef.errors && (passwordConfirmRef.dirty || passwordConfirmRef.touched)" class="alert-warning">
         <div [hidden] = "!passwordConfirmRef.errors.required">
           {{'Potwierdz swoje haslo!'|translate}}
         </div>
@@ -105,8 +105,8 @@
 
     <div class="form-group">
       <label for="question">{{'Pytanie kontrolne'|translate}}</label>
-      <select #questionRef="ngModel" required class="form-control" id="question" name="question" ngModel><option>Pytanie 1</option><option>Pytanie 2</option><option>Pytanie 3</option><option>Pytanie 4</option><option>Pytanie 5</option></select>
-      <div *ngIf="questionRef.errors && (questionRef.dirty || questionRef.touched)" class="alert-danger">
+      <select #questionRef="ngModel" required class="form-control" id="question" name="question" ngModel><option>{{'pytanie1'|translate}}</option><option>{{'pytanie2'|translate}}</option><option>{{'pytanie3'|translate}}</option><option>{{'pytanie4'|translate}}</option></select>
+      <div *ngIf="questionRef.errors && (questionRef.dirty || questionRef.touched)" class="alert-warning">
         <div [hidden] = "!questionRef.errors.required">
           {{'Wybierz pytanie kontrolne!'|translate}}
         </div>
@@ -116,7 +116,7 @@
     <div class="form-group">
       <label for="answer">{{'Odpowiedz'|translate}}</label>
       <input type="text" maxlength="100" minlength="6" #answerRef="ngModel" maxlength="100" required class="form-control" id="answer" name="answer" ngModel/>
-      <div *ngIf="answerRef.errors && (answerRef.dirty || answerRef.touched)" class="alert-danger">
+      <div *ngIf="answerRef.errors && (answerRef.dirty || answerRef.touched)" class="alert-warning">
         <div [hidden] = "!answerRef.errors.required">
           {{'Podaj odpowiedz na pytanie kontrolne!'|translate}}
         </div>

@@ -1,6 +1,6 @@
 <div *ngIf="flag" class="container">
   <div class="jumbotron">
-    <h6>Strona korzysta z plików cookies w celu realizacji usług i zgodnie z Polityką Plików Cookies. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.</h6>
-    <button (click)="changeFlag()" class="btn btn-default btn-xs" >Zamknij</button>
+    <h6>{{'cookies1'|translate}}<a>{{'cookiesLink'|translate}}</a>{{'cookies2'|translate}}</h6>
+    <button (click)="changeFlag()" class="btn btn-default btn-xs" >{{'Zamknij'|translate}}</button>
   </div>
 </div>

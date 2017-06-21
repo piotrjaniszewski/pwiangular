@@ -107,13 +107,17 @@ export const LANG_PL_TRANS = {
   'Wlochy':'Włochy',
 
 
-  'pytanie1':'pytanie1',
-  'pytanie2':'pytanie2',
-  'pytanie3':'pytanie3',
-  'pytanie4':'pytanie4',
+  'pytanie1':'Co widzisz za oknem domu?',
+  'pytanie2':'Czego boisz się najbardziej?',
+  'pytanie3':'Co robisz najlepiej?',
+  'pytanie4':'Czego nie lubisz najbardziej?',
 
   'Gracz: ':'Gracz: ',
   'Wygrywa gracz: ':'Wygrywa gracz: ',
   'Zaloguj sie!': 'Zaloguj się!',
-  'Jezyk':'Język'
+  'Jezyk':'Język',
+  'Zamknij':'Zamknij',
+  'cookies1':'Strona korzysta z plików cookies w celu realizacji usług i zgodnie z ',
+  'cookiesLink':'Polityką Plików Cookies.',
+  'cookies2':' Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.'
 };
